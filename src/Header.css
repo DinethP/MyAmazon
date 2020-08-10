@@ -1,0 +1,42 @@
+.header {
+    background-color: #131921;
+    /* Align items of header to be in one line */
+    display: flex;
+    align-items: center;
+}
+
+.header__logo {
+    width: 100px;
+    object-fit: contain;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 18px;
+
+} 
+
+.header__search {
+    /* Makes the search input and logo vertically aligned together */
+    display: flex;
+    /* Make the search bar take max width possible */
+    /* flex: 1; ==>
+        flex-grow : 1;    ➜ The div will grow in same proportion as the window-size       
+        flex-shrink : 1;  ➜ The div will shrink in same proportion as the window-size 
+        flex-basis : 0;   ➜ The div does not have a starting value as such and will 
+                        take up screen as per the screen size available for
+                        e.g:- if 3 divs are in the wrapper then each div will take 33%. */
+    flex: 1;
+}
+
+.header__searchInput {
+    height: 12px;
+    padding: 10px;
+    border: none;
+    width: 100%;
+}
+
+.header__searchIcon {
+    padding: 5px;
+    /* We neeed !important to override materil-ui CSS values for icons */
+    height: 22px !important;
+    background-color: #cd9042;
+}
