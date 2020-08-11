@@ -16,7 +16,26 @@
 
 .header__nav {
     display: flex;
+    /* Doesn't seem to make a difference */
     justify-content: space-evenly;
+}
+
+.header__options {
+    display: flex;
+    /* Puts the two span elements in each link into a column */
+    flex-direction: column;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.header__optionLineOne {
+    font-size: 10px;
+}
+
+.header__optionLineTwo {
+    font-size: 13px;
+    /* Bolding text */
+    font-weight: 800; 
 }
 
 .header__link {
@@ -27,7 +46,7 @@
     /* Makes the search input and logo vertically aligned together */
     display: flex;
     /* Make the search bar take max width possible */
-    /* flex: 1; ==>
+    /* flex: 1; this css property implies==>
         flex-grow : 1;    ➜ The div will grow in same proportion as the window-size       
         flex-shrink : 1;  ➜ The div will shrink in same proportion as the window-size 
         flex-basis : 0;   ➜ The div does not have a starting value as such and will 
@@ -45,7 +64,7 @@
 
 .header__searchIcon {
     padding: 5px;
-    /* We neeed !important to override materil-ui CSS values for icons */
+    /* We neeed !important to override material-ui CSS values for icons */
     height: 22px !important;
     background-color: #cd9042;
 }

@@ -28,24 +28,24 @@ function Header() {
         {/*Link 1: sign-in */}
         <Link to="/login" className="header__link">
           <div className="header__options">
-            <span>Hello Dineth</span>
-            <span>Sign In</span>
+            <span className="header__optionLineOne">Hello Dineth</span>
+            <span className="header__optionLineTwo">Sign In</span>
           </div>
         </Link>
 
         {/*Link 2: orders*/}
         <Link to="/" className="header__link">
           <div className="header__options">
-            <span>Returns</span>
-            <span>Orders</span>
+            <span className="header__optionLineOne">Returns</span>
+            <span className="header__optionLineTwo">Orders</span>
           </div>
         </Link>
 
         {/*Link 3: prime*/}
         <Link to="/" className="header__link">
           <div className="header__options">
-            <span>Your</span>
-            <span>Prime</span>
+            <span className="header__optionLineOne">Your</span>
+            <span className="header__optionLineTwo">Prime</span>
           </div>
         </Link>
       </div>
