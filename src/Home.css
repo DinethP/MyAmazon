@@ -1,0 +1,14 @@
+.home {
+    /* This css makes sure the images doesn't stretch too far
+    If screen size is bigger than 1600px, it will ceter align
+    the content with equal amrgin on wither side */
+    max-width: 1600px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.home__image {
+    width: 100%;
+    /* Create the gradient mask effect */
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}
