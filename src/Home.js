@@ -11,13 +11,45 @@ function Home() {
         alt=""
       />
       {/* List of products */}
-      <Product
-        id="12312315"
-        title="PlayStation 4"
-        price={453.25}
-        rating={5}
-        image="https://images-na.ssl-images-amazon.com/images/I/814Cwlg1JaL._SL1500_.jpg"
-      />
+      <div className="home__row">
+        <Product
+          id="12312315"
+          title="ROG Zephyrus M Thin and Portable Gaming Laptop, 15.6” 144Hz Full HD IPS, NVIDIA GeForce GTX 1660 Ti, Intel Core i7-9750H, 16GB DDR4 RAM, 512B PCIe SSD, Per-Key RGB, Windows 10 Pro, GU502GU-XB74"
+          price={469.0}
+          rating={5}
+          image="https://images-na.ssl-images-amazon.com/images/I/71t%2Bj90ObGL._AC_SL1500_.jpg"
+        />
+        <Product
+          id="12312315"
+          title="Sony WH-1000XM4 Wireless Industry Leading Noise Canceling Overhead Headphones with Mic for Phone-Call and Alexa Voice Control, Black"
+          price={469.0}
+          rating={5}
+          image="https://images-na.ssl-images-amazon.com/images/I/71o8Q5XJS5L._AC_SL1500_.jpg"
+        />
+        <Product
+          id="12312315"
+          title='Honor MagicWatch 2 Smart Watch, 1.39" AMOLED 5ATM Waterproof 14 Days Standby Smart Bracelet with GPS Bluetooth 46mm Fitness Tracker Activity Tracker (Brown, 46mm)'
+          price={469.0}
+          rating={5}
+          image="https://images-na.ssl-images-amazon.com/images/I/71MPKy6A%2BqL._AC_SL1500_.jpg"
+        />
+      </div>
+      <div className="home__row">
+        <Product
+          id="12312315"
+          title="OnePlus 8 Interstellar Glow, 5G Unlocked Android Smartphone U.S Version, 12GB RAM+256GB Storage, 90Hz Fluid Display,Triple Camera, with Alexa Built-in"
+          price={799.0}
+          rating={5}
+          image="https://images-na.ssl-images-amazon.com/images/I/51jRkmWWIFL._AC_SL1040_.jpg"
+        />
+        <Product
+          id="12312315"
+          title="Newest Sony Playstation 4 PS4 1TB HDD Gaming Console Bundle with Three Games: The Last of Us, God of War, Horizon Zero Dawn, Included Dualshock 4 Wireless Controller"
+          price={469.0}
+          rating={4}
+          image="https://images-na.ssl-images-amazon.com/images/I/814Cwlg1JaL._SL1500_.jpg"
+        />
+      </div>
     </div>
   );
 }
