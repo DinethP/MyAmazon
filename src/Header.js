@@ -3,8 +3,16 @@ import "./css/Header.css";
 import { Link } from "react-router-dom";
 import SearchIcon from "@material-ui/icons/Search";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
+// This is the component used to access the data layer
+import { useStateValue } from "./StateProvider";
 
 function Header() {
+  // Using the data layer to get data
+  // useStateValue returns all the data in data layer.
+  // We then use ES6 destructuring to get all the individual data 
+  // FOR this case, even "cost[{basket}] = useStateValue();"" will work 
+  // because we don't need dispatch to fetch data
+  const[{basket}, dispatch] = useStateValue();
   return (
     <nav className="header">
       {/* Link is better than href tag bevause it doesnt reload the page */}
@@ -56,7 +64,7 @@ function Header() {
             {/* Shopping basket icon */}
             <ShoppingBasketIcon />
             {/* Number of items in basket */}
-            <span className="header__optionLineTwo header__basketCount">0</span>
+            <span className="header__optionLineTwo header__basketCount">{basket.length}</span>
           </div>
         </Link>
       </div>
