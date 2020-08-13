@@ -20,9 +20,9 @@ function Product({ id, title, image, price, rating }) {
               <p>⭐</p>
             ))
         }
-        <img src={image} alt=""/>
-        <button>Add to basket</button>
       </div>
+      <img src={image} alt="" />
+      <button>Add to basket</button>
     </div>
   );
 }
