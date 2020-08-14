@@ -1,5 +1,7 @@
 import React from "react";
 import { useStateValue } from "./StateProvider";
+import CheckoutProduct from "./CheckoutProduct"
+import "./css/Checkout.css"
 
 function Checkout() {
   const [{ basket }, dispatch] = useStateValue();
@@ -10,6 +12,27 @@ function Checkout() {
         alt=""
         className="checkout__ad"
       />
+      {basket?.length === 0 ? (
+        <div>
+          <h2>Your shopping basket is empty</h2>
+          <p>You have no items in your basket. To buy one or more items, click 
+            "Add to basket" button below the item</p>
+        </div>
+      ): (
+        <div>
+          <h2 className="checkout__tile">Your shopping cart</h2>
+          {/* List of checkout products */}
+          {basket.map(item => (
+            <CheckoutProduct 
+            item={item.id}
+            title={item.title}
+            image={item.price}
+            price={item.price}
+            rating={item.rating}
+            />
+          ))}  
+        </div>
+      )}
     </div>
   );
 }
