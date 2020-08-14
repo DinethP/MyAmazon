@@ -13,6 +13,7 @@ function Header() {
   // FOR this case, even "cost[{basket}] = useStateValue();"" will work 
   // because we don't need dispatch to fetch data
   const[{basket}, dispatch] = useStateValue();
+  console.log(basket);
   return (
     <nav className="header">
       {/* Link is better than href tag bevause it doesnt reload the page */}
@@ -64,7 +65,8 @@ function Header() {
             {/* Shopping basket icon */}
             <ShoppingBasketIcon />
             {/* Number of items in basket */}
-            <span className="header__optionLineTwo header__basketCount">{basket.length}</span>
+            {/* We use a ternary operator "?" (if statement) to make sure the basket is not empty (async code) */}
+            <span className="header__optionLineTwo header__basketCount">{basket?.length}</span>
           </div>
         </Link>
       </div>
