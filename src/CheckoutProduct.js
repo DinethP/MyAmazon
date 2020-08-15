@@ -1,10 +1,11 @@
 import React from 'react'
+import './css/CheckoutProduct.css'
 
 function CheckoutProduct({id, title, image, price, rating}) {
   return (
     <div className="checkoutProduct">
-      <img src={image} alt=""/>
-      <div className="checoutProduct__Info">
+      <img src={image} alt="" className="checkoutProduct__image" />
+      <div className="checkoutProduct__info">
         <p className="checkoutItem__title">{title}</p>
 
          <p className="checkoutProduct__price">
