@@ -5,6 +5,8 @@ import SearchIcon from "@material-ui/icons/Search";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 // This is the component used to access the data layer
 import { useStateValue } from "./StateProvider";
+import { auth } from "./firebase";
+
 
 function Header() {
   // Using the data layer to get data
@@ -13,11 +15,17 @@ function Header() {
   // FOR this case, even "cost[{basket}] = useStateValue();"" will work 
   // because we don't need dispatch to fetch data
   const[{basket, user}, dispatch] = useStateValue();
+
+  const login = () => {
+    if (user){
+      // signOut user if user is already logged in
+      auth.signOut()
+    }
+  }
   return (
     <nav className="header">
       {/* Link is better than href tag bevause it doesnt reload the page */}
       <Link to="/">
-        {" "}
         {/*Link back to homepage */}
         {/*logo on the left -> img  */}
         <img
@@ -35,10 +43,12 @@ function Header() {
       {/* 3 links (sign-in/orders/prime)*/}
       <div className="header__nav">
         {/*Link 1: sign-in */}
-        <Link to="/login" className="header__link">
-          <div className="header__options">
-            <span className="header__optionLineOne">Hello Dineth</span>
-            <span className="header__optionLineTwo">Sign In</span>
+        {/* redirect to login page only if there is no user logged in currently  */}
+        <Link to={!user && "/login"} className="header__link">
+          <div onClick={login} className="header__options">
+            {/* Show user email if logged in. Otherwise empty */}
+            <span className="header__optionLineOne">Hello {user?.email}</span>
+            <span className="header__optionLineTwo">{user ? 'Sign Out' :'Sign In' }</span>
           </div>
         </Link>
 
