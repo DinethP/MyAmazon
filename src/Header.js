@@ -12,8 +12,7 @@ function Header() {
   // We then use ES6 destructuring to get all the individual data 
   // FOR this case, even "cost[{basket}] = useStateValue();"" will work 
   // because we don't need dispatch to fetch data
-  const[{basket}, dispatch] = useStateValue();
-  console.log(basket);
+  const[{basket, user}, dispatch] = useStateValue();
   return (
     <nav className="header">
       {/* Link is better than href tag bevause it doesnt reload the page */}

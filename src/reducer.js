@@ -2,17 +2,7 @@
 
 export const initialState = {
   // This is our data layer
-  basket: [
-    {
-      id: "12312315",
-      title:
-        "OnePlus 8 Interstellar Glow, 5G Unlocked Android Smartphone U.S Version, 12GB RAM+256GB Storage, 90Hz Fluid Display,Triple Camera, with Alexa Built-in",
-      price: 799.0,
-      rating: 5,
-      image:
-        "https://images-na.ssl-images-amazon.com/images/I/51jRkmWWIFL._AC_SL1040_.jpg",
-    },
-  ],
+  basket: [],
   user: null,
 };
 
@@ -33,6 +23,11 @@ const reducer = (state, action) => {
     // These cases are event listeners. It listen's to dispatch() actions.
     //  If the event with these action.type is fired, it executes
     // the releavant code
+    case "SET_USER":
+      return {
+        ...state,
+        user: action.user
+      }
     case "ADD_TO_BASKET":
       //Logic for adding item to basket
       return {

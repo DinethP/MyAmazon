@@ -5,6 +5,7 @@ import { auth } from './firebase';
 
 function Login() {
   // setup state (short term memory/variables in react)
+  const history = useHistory();
   const[email, setEmail] =  useState('');
   const [password, setPassword] = useState('')
 
@@ -15,6 +16,10 @@ function Login() {
     auth.signInWithEmailAndPassword(email, password)
     .then((auth) => {
       // logged in, redirect to homepage
+
+      // push to history so that the user comes back to 
+      // login page when clicking back button
+      history.push('/'); 
     })
     .catch((e) => {
       // error logging in
@@ -30,6 +35,10 @@ function Login() {
     auth.createUserWithEmailAndPassword(email, password)
     .then(auth => {
       // created a user and logged in, redirect to homepage
+
+      // push to history so that the user comes back to 
+      // login page when clicking back button
+      history.push('/'); 
     })
     .catch((e) => {
       alert(e.message);
