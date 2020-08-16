@@ -11,7 +11,7 @@ export const StateContext = createContext();
 export const StateProvider = ({reducer, initialState, children}) => (
     // useReducer() is a hook
     <StateContext.Provider value={useReducer(reducer, initialState)}>
-        {/* Here, childre refers to the <App /> component in index.js  */}
+        {/* Here, children refers to the <App /> component in index.js  */}
         {children}
     </StateContext.Provider>
 );

@@ -36,8 +36,26 @@ const reducer = (state, action) => {
       };
     // break;
     case "REMOVE_FROM_BASKET":
-      // Logic for remiving item from basket
-      return { state };
+      // Logic for removing item from basket
+
+      // Copy current basket
+      let newBasket = [...state.basket];
+      // Get the index of item to be removed
+      const index = state.basket.findIndex(
+        (basketItem) => basketItem.id === action.id
+      );
+
+      if (index >= 0) {
+        // Item exists in basket, remove it
+        newBasket.splice(index, 1);
+      } else {
+        // console.log in red font colour
+        console.warn(
+          `Can't remove product (id: ${action.id} as it is not in basket`
+        );
+      }
+      // return the state but update the basket to newBasket
+      return { ...state, basket: newBasket };
     // break;
     default:
       // return the current state(data layer) if no case matches
