@@ -16,6 +16,15 @@ export const initialState = {
   user: null,
 };
 
+// Make a "selector"
+export const getBasketTotal = (basket) => {
+  {console.log(basket)}
+  return(
+    // This method returns the sum of basket items
+    // 0 tells the function to start the value of amount from 0
+    basket?.reduce((amount, item) => item.price + amount, 0)
+    )
+}
 // Data layer is referred as state
 // Manipulating data layer is through action
 const reducer = (state, action) => {
