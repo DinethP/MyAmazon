@@ -31,7 +31,7 @@ React Material UI
 
 <img src="./images/demo1.gif"/>
 
-<img src="./images/demo1.gif"/>
+<img src="./images/demo2.gif"/>
 
 
 
