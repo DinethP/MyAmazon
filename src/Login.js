@@ -66,8 +66,8 @@ function Login() {
         </form>
         <p>
           By signing-in you agree to Amazon's Conditions of Use &
-          Sale.checkbox-light Please see our Privacy Notice, our Cookies Notice
-          and our Interest-Based Ads Notice
+          Sale. Please see our Privacy Notice, our Cookies Notice
+          and our Interest-Based Ads Notice for more information.
         </p>
         <button onClick={register}  className="login__registerButton">Create your Account</button>
       </div>

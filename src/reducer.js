@@ -8,7 +8,6 @@ export const initialState = {
 
 // Make a "selector"
 export const getBasketTotal = (basket) => {
-  {console.log(basket)}
   return(
     // This method returns the sum of basket items
     // 0 tells the function to start the value of amount from 0
