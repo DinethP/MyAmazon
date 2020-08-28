@@ -14,7 +14,7 @@
 
 This is an Amazon.com clone built with ReactJs and Firebase. It features User authentication, product listing page, checkout page, checkout subtotal calculator, etc.
 
-#### **The live demo can be accessed at:**  [MyAmazon](https://example.com)
+#### **The live demo can be accessed at:**  [MyAmazon](https://clone-31f15.web.app/)
 
 
 
